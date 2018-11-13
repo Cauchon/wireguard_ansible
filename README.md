@@ -3,6 +3,8 @@
 This is the ansible automation of the Wireguard VPN set up described here https://www.ckn.io/blog/2017/11/14/wireguard-vpn-typical-setup/
 This will create ten VPN client profiles when done.
 
+NOTE: This is a fork that updates eth0 to venet0:0 for OpenVZ servers
+
 # Requirements
 
 This assumes an ubuntu 16.04 client. It should also work on other platforms with minimal tweaking.
@@ -24,7 +26,7 @@ This assumes you have an Ubuntu 16.04 server with ssh access on port 22.
 Ensure that you've already added the server key to your known hosts file by sshing into it at least once.
 If you are using an SSH key, then you can forgo that.
 
-This guide assumes your VPN server's internet facing interface is **eth0**. If otherwise change the interface name in line **59** of the **firewall.yml** file to what you have.
+This guide assumes your VPN server's internet facing interface is **venet0:0**. If otherwise change the interface name in line **59** of the **firewall.yml** file to what you have.
 
 # Usage
 
